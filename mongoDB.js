@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
+require('dotenv').config();
 
-const dbURI = 'mongodb+srv://Admin:DS1qIALdF6Wu7Ks3@cluster0.wzmslcg.mongodb.net/portfolioMessage?retryWrites=true&w=majority';
+const dbURI = process.env.MONGODB_URI;
 
 mongoose.connect(dbURI, {
   useNewUrlParser: true,
